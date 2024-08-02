@@ -13,8 +13,8 @@ This project sets up a development environment for creating and testing Ansible 
 1. **Clone the Repository:**
 
    ```sh
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/hongjiaherng/ansible-docker-compose.git
+   cd ansible-docker-compose
    ```
 
 2. **Build and Start the Containers:**
