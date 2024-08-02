@@ -1,0 +1,32 @@
+services:
+  ansible-control:
+    build:
+      context: ./ansible-control
+    container_name: ansible-control
+    networks:
+      - ansible-network
+    volumes:
+      - ./ansible-control/ansible:/etc/ansible
+    ports:
+      - "2222:22"
+    hostname: ansible-control
+
+  ansible-node1:
+    build:
+      context: ./ansible-node
+    container_name: ansible-node1
+    networks:
+      - ansible-network
+    hostname: ansible-node1
+
+  ansible-node2:
+    build:
+      context: ./ansible-node
+    container_name: ansible-node2
+    networks:
+      - ansible-network
+    hostname: ansible-node2
+
+networks:
+  ansible-network:
+    driver: bridge
